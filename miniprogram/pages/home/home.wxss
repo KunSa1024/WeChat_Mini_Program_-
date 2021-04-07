@@ -1,0 +1,125 @@
+/* miniprogram/pages/home/home.wxss */
+
+/* 骨架屏 */
+@import "./home.skeleton.wxss";
+
+
+.home .home-bg {
+  height: 400rpx;
+  background-color: #fedb5b;
+  
+}
+
+.home .home-bg .surplus-box {
+  position: relative;
+  height: 150rpx;
+  padding-bottom: 40rpx;
+}
+
+.home .home-bg .surplus-box .surplus {
+  position: absolute;
+  left: 50%;
+  top: 40rpx;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.home .home-bg .surplus-box .surplus .surplus-title {
+  font-size: 32rpx;
+}
+
+.home .home-bg .surplus-box .surplus .surplus-money {
+  font-weight: bold;
+  margin-top: 20rpx;
+  font-size: 40rpx;
+}
+
+.home .home-bg .surplus-box .surplus .surplus-money .surplus-money-decimals {
+  font-size: 28rpx;
+}
+
+.home .home-bg .expendAndIncome-box {
+  display: flex;
+  padding: 0 20rpx;
+  margin-top: 40rpx;
+}
+
+.home .home-bg .expendAndIncome-box .expendAndIncome-item {
+  flex: 1;
+  text-align: center;
+  border-right: 1px solid #333;
+}
+
+.home .home-bg .expendAndIncome-box .expendAndIncome-item:last-child {
+  border-right: 0px;
+}
+
+.home .home-bg .expendAndIncome-box .expendAndIncome-item .expendAndIncome-title {
+  font-size: 28rpx;
+}
+
+.home .home-bg .expendAndIncome-box .expendAndIncome-item .expendAndIncome-money {
+  font-size: 32rpx;
+  font-weight: bold;
+  margin-top: 10rpx;
+}
+
+.home .home-bg .expendAndIncome-box .expendAndIncome-item .expendAndIncome-money text {
+  font-size: 26rpx;
+}
+
+.home .book-box .book-box-nav {
+  display: flex;
+  padding: 0 20rpx;
+  background-color: #fff;
+}
+
+.home .book-box .book-box-nav .nav-content {
+  margin-right: auto;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  font-size: 26rpx;
+  color: #999;
+}
+
+.home .book-box .book-box-nav .item1 {
+  margin-left: 20rpx;
+}
+
+.home .book-box .book-box-nav .item1.zc {
+  color: #e60012;
+}
+
+.home .book-box .book-box-nav .item1.sr {
+  color: #00b26a;
+}
+
+.home .select-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.home .select-box .point {
+  width: 10rpx;
+  height: 10rpx;
+  background-color: #999;
+  border-radius: 10rpx;
+  margin: 0 4rpx;
+}
+
+.home .select-box .picker-box {
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0;
+}
+
+.not-booking {
+  text-align: center;
+  margin-top: 100rpx;
+  font-size: 28rpx;
+  color: #666;
+}

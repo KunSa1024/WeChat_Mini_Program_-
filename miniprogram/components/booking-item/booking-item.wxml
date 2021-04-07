@@ -1,0 +1,28 @@
+<view class="booking-item">
+  <view class="booking-item-icon">
+    <image class="auto-img" mode="widthFix" src="{{ bookingData.subType.icon }}"></image>
+  </view>
+  <view class="booking-item-info">
+    <view class="info-box">
+      <view class="title-box">
+        <view class="title">{{ bookingData.subType.name }}</view>
+        <view class="payment {{ bookingData.account.type }}">{{ bookingData.account.name }}</view>
+        <view class="date">{{ bookingData.date }}</view>
+      </view>
+      <view class="infuse">{{ bookingData.comment }}</view>
+    </view>
+
+    <view class="booking-item-right">
+      <view class="info-price {{ bookingData.mainType.type }}">￥{{ bookingData.money }}</view>
+      <view
+      class="delete"
+      wx:if="{{ isDelete }}"
+      data-_id="{{ bookingData._id }}"
+      bindtap="removeCurrentBooking"
+      >
+        <image class="auto-img" src="../../images/delete.png"></image>
+      </view>
+    </view>
+    
+  </view>
+</view>

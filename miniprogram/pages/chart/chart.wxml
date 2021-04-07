@@ -1,0 +1,63 @@
+<!--pages/chart/chart.wxml-->
+<import src="chart.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+
+<view class="chart" wx:else>
+
+  <view class="chart-nav">
+    <view class="select-date">
+      <picker
+      mode="date"
+      start="2000-01-01"
+      end="{{ end }}"
+      bindchange="selectData"
+      >
+        {{ date }}
+      </picker>
+    </view>
+
+    <view
+    class="date-type"
+    bindtap="toggleFateType"
+    >
+      按{{ dateStatus == 0 ? '年' : dateStatus == 1 ? '月' : '日' }}查询
+    </view>
+  </view>
+
+  <view>
+
+    <view class="type-nav">
+      <view
+      class="type-nav-item"
+      wx:for="{{ subType }}"
+      wx:key="index"
+      >
+        <view
+        class="type-nav-title {{ activeIndex == index ? item.type : '' }}"
+        data-index="{{ index }}"
+        bindtap="togglesubType"
+        >
+          <view>{{ dateStatus == 0 ? '年' : dateStatus == 1 ? '月' : '日' }}{{ item.title }}</view>
+          <view class="{{ item.type == 'sr' ? 'type-nav-sr' : 'type-nav-zc'}}">{{ item.money }}</view>
+        </view>
+      </view>
+    </view>
+
+    <view class="pie-box" >
+      <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}"></ec-canvas>
+    </view>
+
+    <view class="type-data">
+      <type-data
+      wx:for="{{ bookingData[subType[activeIndex].type].subType }}"
+      wx:key="index"
+      booking="{{ item }}"
+      total="{{ subType[activeIndex].money }}"
+      index="{{ activeIndex }}"
+      bindclicktypedata="goDetail"
+      ></type-data>
+    </view>
+
+  </view>
+
+</view>

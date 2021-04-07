@@ -1,0 +1,101 @@
+/* miniprogram/pages/addIcon/addIcon.wxss */
+
+.addIcon {
+}
+
+.addIcon .title-box {
+  background-color: #fff;
+  display: flex;
+  padding: 30rpx 40rpx;
+}
+
+.addIcon .title-box .title {
+  font-size: 32rpx;
+}
+
+.addIcon .title-box .title-content-bxo {
+  margin-left: 20rpx;
+}
+
+.addIcon .icon {
+  background-color: #fff;
+  margin-top: 40rpx;
+}
+
+.addIcon .icon .icon-title {
+  font-size: 34rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.addIcon .icon .icon-box {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 20rpx;
+  /* height: 200rpx; */
+  justify-content: center;
+  padding-bottom: 10rpx;
+}
+.addIcon .icon .icon-box .icon-list {
+  width: 20%;
+  height: 110rpx;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.addIcon .icon .icon-box .icon-list .icon-list-box  {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 10rpx 20rpx;
+}
+
+.addIcon .icon .icon-box .icon-list .icon-list-box.active {
+  width: 110rpx;
+  height: 110rpx;
+}
+
+.addIcon .icon .icon-box .icon-list .icon-list-box .aout-img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.addIcon .up-image-box {
+  margin-top: 40rpx;
+  background-color: #fff;
+  padding: 0rpx 20rpx;
+}
+
+.addIcon .up-image-box .up-image-title {
+  font-size: 34rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.addIcon .up-image-box .image-box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.addIcon .up-image-box .image-box .del {
+  margin: auto 0;
+  background-color: red;
+  color: #eee;
+  font-size: 26rpx;
+  padding: 10rpx;
+  border-radius: 10rpx;
+}
+
+.addIcon .btn {
+  font-size: 30rpx;
+  width: calc(100% - 40rpx);
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background-color: #fedb5b;
+  margin: 0 20rpx;
+  margin-top: 100rpx;
+  border-radius: 10rpx;
+}

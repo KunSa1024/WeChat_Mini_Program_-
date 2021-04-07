@@ -1,0 +1,8 @@
+<!--components/list-item/list-item.wxml-->
+
+<view class="list-item" bindtap="clickLitItem">
+  <view class="list-item-title">{{ title }}</view>
+  <view class="list-item-icon">
+    <image class="auto-img" src="../../images/right-arrow.png"></image>
+  </view>
+</view>

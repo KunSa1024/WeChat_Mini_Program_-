@@ -1,0 +1,226 @@
+/* pages/booking/booking.wxss */
+/* 骨架屏 */
+@import "./booking.skeleton.wxss";
+
+.booking {
+
+}
+
+.booking .booking-bg {
+  height: 200rpx;
+  background-color: #eab93f;
+}
+
+.booking .booking-box {
+  position: relative;
+  top: -80rpx;
+  padding: 20rpx;
+}
+
+.booking .booking-box .booking-type {
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 20rpx;
+}
+
+.booking .booking-box .booking-type .booking-type-title {
+  width: 200rpx;
+  height: 60rpx;
+  border: 1rpx solid #eab93f;
+  margin: 0 auto;
+  border-radius: 30rpx;
+  display: flex;
+  text-align: center;
+  line-height: 60rpx;
+  overflow: hidden;
+}
+
+.booking .booking-box .booking-type .booking-type-title .booking-type-item {
+  flex: 1;
+  font-size: 28rpx;
+  padding: 0 20rpx;
+}
+
+.booking .booking-box .booking-type .booking-type-title .booking-type-item.active {
+  background-color: #fedb5b;
+}
+
+.booking .booking-box .booking-type .booking-type-icons .swiper-box {
+  height: 400rpx;
+}
+
+.booking .booking-box .booking-type .booking-type-icons .swiper-box .swiper-item-box {
+  /* height: 280rpx; */
+  display: flex;
+  /* 换行 */
+  flex-wrap: wrap;
+  padding-top: 60rpx;
+}
+
+.booking .booking-box .booking-type .booking-type-icons .swiper-box .swiper-item-box .sw-icon {
+  width: 20%;
+  text-align: center;
+  margin-bottom: 20rpx;
+}
+
+.booking .booking-box .booking-type .booking-type-icons .swiper-box .swiper-item-box .sw-icon .sw-icon-box {
+  width: 80rpx;
+  height: 80rpx;
+  /* background-color: aqua; */
+  margin: 0 auto;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform .2s ease-in-out;
+}
+
+.booking .booking-box .booking-type .booking-type-icons .swiper-box .swiper-item-box .sw-icon .sw-icon-box .auto-img {
+  width: 100%;
+  display: block;
+}
+
+.booking .booking-box .booking-type .booking-type-icons .swiper-box .swiper-item-box .sw-icon .sw-icon-text {
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  transition: color .2s ease-in-out;
+}
+
+.booking .booking-box .booking-type .booking-type-icons .swiper-box .swiper-item-box .sw-icon.active .sw-icon-text {
+  color: #fedb5b;
+}
+
+.booking .booking-box .booking-type .booking-type-icons .swiper-box .swiper-item-box .sw-icon.active .sw-icon-box {
+  /* 放大 */
+  transform: scale(1.2);
+}
+
+.booking .booking-box .booking-account {
+  margin-top: 40rpx;
+  padding: 20rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+}
+
+.booking .booking-box .booking-account .account-title {
+  font-size: 28rpx;
+  color: #333;
+  padding-bottom: 20rpx;
+  border-bottom: 1px solid #ebebeb;
+  margin-bottom: 20rpx;
+}
+
+.booking .booking-box .booking-account .account-items {
+  display: flex;
+  justify-content: space-around;
+}
+
+.booking .booking-box .booking-account .account-items .account-item {
+  font-size: 24rpx;
+  background-color: #e8e8e8;
+  padding: 10rpx 24rpx;
+  border-radius: 52rpx;
+}
+
+.booking .booking-box .booking-account .account-items .account-item.active0 {
+  background-color: #e60012;
+  color: #fff;
+}
+
+.booking .booking-box .booking-account .account-items .account-item.active1 {
+  background-color: #02a9f1;
+  color: #fff;
+}
+
+.booking .booking-box .booking-account .account-items .account-item.active2 {
+  background-color: #09bb07;
+  color: #fff;
+}
+
+.booking .booking-box .booking-account .account-items .account-item.active3 {
+  background-color: #3366cc;
+  color: #fff;
+}
+
+.booking .booking-box .booking-account .account-items .account-item.active4 {
+  background-color: #253b80;
+  color: #fff;
+}
+
+
+.booking .booking-box .booking-content {
+  margin-top: 20rpx;
+  background-color: #fff;
+  padding: 20rpx;
+  border-radius: 20rpx;
+}
+
+.booking .booking-box .booking-content .booking-content-item {
+  display: flex;
+}
+
+.booking .booking-box .booking-content .booking-content-item .b-title {
+  height: 80rpx;
+  font-size: 28rpx;
+  line-height: 80rpx;
+  width: 100rpx;
+}
+
+.booking .booking-box .booking-content .booking-content-item .c-content {
+  width: calc(100% - 80rpx);
+  height: 80rpx;
+}
+
+.booking .booking-box .booking-content .booking-content-item .c-content .picker-box,
+.booking .booking-box .booking-content .booking-content-item .c-content .ipt-number {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+  color: #666;
+}
+
+.booking .booking-box .booking-content .textarea {
+  height: 80rpx;
+}
+
+.booking .booking-box .booking-content .booking-content-item .textarea-c {
+  height: 80rpx;
+  /* padding-top: 25rpx;
+  padding-right: 20rpx; */
+}
+
+.booking .booking-box .booking-content .booking-content-item .textarea-c .t {
+  width: 100%;
+  height: 100%;
+  font-size: 28rpx;
+  color: #666;
+}
+
+/* .booking .booking-box .booking-content .booking-content-item .textarea-c .area {
+  font-size: 28rpx;
+  color: #666;
+} */
+
+
+.booking .booking-box .save-btn-box {
+  margin-top: 60rpx;
+  position: relative;
+}
+
+.booking .booking-box .save-btn-box .save-btn {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 34rpx;
+  text-align: center;
+  background-color: #fedb5b;
+  border-radius: 20rpx;
+  font-weight: 500;
+}
+
+button:not([size='mini']) {
+  position: absolute;
+  top: 0px;
+  width: 100% !important;
+  background-color: transparent;
+  /* 透明度 */
+  opacity: 0;
+}

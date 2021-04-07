@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "booking-item": "../../components/booking-item/booking-item"
+  },
+  "navigationBarTitleText": "记账详情"
+}

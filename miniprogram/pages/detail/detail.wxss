@@ -1,0 +1,3 @@
+/* miniprogram/pages/detail/detail.wxss */
+
+@import "./detail.skeleton.wxss";

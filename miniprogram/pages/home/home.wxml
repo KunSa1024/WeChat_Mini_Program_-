@@ -1,0 +1,74 @@
+<!--miniprogram/pages/home/home.wxml-->
+
+<!-- 骨架屏 -->
+<import src="home.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+
+<view class="home" wx:else>
+  <view class="home-bg">
+    <view class="surplus-box">
+      <view class="surplus">
+        <view class="surplus-title">本月结余</view>
+        <view class="surplus-money">{{ currentMonthBooking.jy }}.<text class="surplus-money-decimals">{{ currentMonthBooking.jyDecimal }}</text></view>
+      </view>
+    </view>
+
+    <view class="expendAndIncome-box">
+      <view class="expendAndIncome-item">
+        <view class="expendAndIncome-title">本月支出</view>
+        <view class="expendAndIncome-money">
+          {{ currentMonthBooking.zc }}.<text class="expendAndIncome-money-decimals">{{ currentMonthBooking.zcDecimal }}</text>
+        </view>
+      </view>
+      <view class="expendAndIncome-item">
+        <view class="expendAndIncome-title">本月收入</view>
+        <view class="expendAndIncome-money">
+          {{ currentMonthBooking.sr }}.<text class="expendAndIncome-money-decimals">{{ currentMonthBooking.srDecimal }}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 选择本月任意一天的记账 -->
+  <view class="book-box">
+
+    <view class="book-box-nav">
+      <view class="nav-content">
+        <view class="nav-date">{{ date }}</view>
+        <view class="item1 sr">收入: <text>{{ currentDateMoney.sr }}</text></view>
+        <view class="item1 zc">支出: <text>{{ currentDateMoney.zc }}</text></view>
+      </view>
+      <view class="select-box">
+        <view class="point"></view>
+        <view class="point"></view>
+        <view class="point"></view>
+        <!-- 选择日期组件 -->
+        <picker
+        class="picker-box"
+        mode="date"
+        start="{{ pickerDate.start }}"
+        end="{{ pickerDate.end }}"
+        bindchange="toggleCurrentDate"
+         >
+          当前选择
+        </picker>
+      </view>
+    </view>
+  </view>
+
+  <view>
+
+    <booking-item
+    wx:for="{{ currontDateBooking }}"
+    wx:key="index"
+    booking-data="{{ item }}"
+    ></booking-item>
+    
+    <view
+    class="not-booking"
+    hidden="{{ currontDateBooking.length > 0 }}"
+    >
+      {{ currentDate }} 没有任何记账记录
+    </view>
+  </view>
+</view>

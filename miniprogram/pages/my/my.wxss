@@ -1,0 +1,29 @@
+/* pages/my/my.wxss */
+
+.my .user-bg {
+  height: 360rpx;
+  background-color: #fedb5b;
+  display: flex;
+  align-items: center;
+}
+
+.my .user-bg .user-info {
+  width: 180rpx;
+  margin: 0 auto;
+}
+
+.my .user-bg .user-info .avatat {
+  height: 180rpx;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 0 8rpx rgba(255, 255, 255, .35);
+  overflow: hidden;
+}
+
+.my .user-bg .user-info .nickname {
+  font-size: 32rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  color: #444;
+  
+}

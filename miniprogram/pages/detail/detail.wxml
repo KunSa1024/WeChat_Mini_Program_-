@@ -1,0 +1,16 @@
+<!--miniprogram/pages/detail/detail.wxml-->
+
+<import src="detail.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+
+<view wx:else>
+  <view>
+    <booking-item
+    wx:for="{{ bookingData }}"
+    wx:key="index"
+    booking-data="{{ item }}"
+    bindremove="removeBooking"
+    data-index="{{ index }}"
+    ></booking-item>
+  </view>
+</view>

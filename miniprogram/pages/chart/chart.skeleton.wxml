@@ -1,0 +1,96 @@
+<!--
+此文件为开发者工具生成，生成时间: 2021/4/1 下午2:42:10
+使用方法：
+在 D:\Project\微信小程序\01-记账APP\KunSaAccounting\miniprogram\pages\chart\chart.wxml 引入模板
+
+```
+<import src="chart.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 D:\Project\微信小程序\01-记账APP\KunSaAccounting\miniprogram\pages\chart\chart.wxss 中引入样式
+```
+@import "./chart.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="chart">
+      <view class="chart-nav">
+        <view class="select-date">
+          <view end="2021-03-05" mode="date" start="2000-01-01" class="sk-transparent sk-text-26-6667-411 sk-text sk-image">
+            选择日期
+          </view>
+        </view>
+        <view class="date-type sk-transparent sk-text-26-6667-700 sk-text" style="background-position-x: 50%;">按年查询</view>
+      </view>
+      <view>
+        <view class="type-nav">
+          <view class="type-nav-item">
+            <view class="type-nav-title sr" style="border: none;">
+              <view class="sk-transparent sk-text-14-2857-187 sk-text" style="background-position-x: 50%;">月收入</view>
+              <view class="type-nav-sr sk-transparent sk-text-14-2857-565 sk-text" style="background-position-x: 50%;">123.00000</view>
+            </view>
+          </view>
+          <view class="type-nav-item">
+            <view class="type-nav-title">
+              <view class="sk-transparent sk-text-14-2857-576 sk-text" style="background-position-x: 50%;">月支出</view>
+              <view class="type-nav-zc sk-transparent sk-text-14-2857-75 sk-text" style="background-position-x: 50%;">123.00</view>
+            </view>
+          </view>
+        </view>
+        <view class="pie-box">
+          <view class="aaa"></view>
+        </view>
+        <view class="type-data">
+          <view is="components/type-data/type-data">
+            <view class="data--type-data">
+              <view class="data--type-data-icon">
+                <image class="data--auto-img sk-image"></image>
+              </view>
+              <view class="data--type-data-item">
+                <view class="data--item-title-box">
+                  <view class="data--item-title sk-transparent sk-text-14-2857-712 sk-text">学习</view>
+                  <view class="data--item-money data--sr sk-transparent sk-text-14-2857-407 sk-text">￥123.00</view>
+                </view>
+                <view class="data--item-record-box">
+                  <view class="data--item-porgress">
+                    <view class="data--porgress-active"></view>
+                  </view>
+                  <view class="data--item-record sk-transparent sk-text-14-2857-750 sk-text">2笔</view>
+                </view>
+              </view>
+              <view class="data--type-data-amount">
+                <image class="data--auto-img sk-image"></image>
+              </view>
+            </view>
+          </view>
+          <view is="components/type-data/type-data">
+            <view class="data--type-data">
+              <view class="data--type-data-icon">
+                <image class="data--auto-img sk-image"></image>
+              </view>
+              <view class="data--type-data-item">
+                <view class="data--item-title-box">
+                  <view class="data--item-title sk-transparent sk-text-14-2857-849 sk-text">学习</view>
+                  <view class="data--item-money data--sr sk-transparent sk-text-14-2857-239 sk-text">￥123.00</view>
+                </view>
+                <view class="data--item-record-box">
+                  <view class="data--item-porgress">
+                    <view class="data--porgress-active"></view>
+                  </view>
+                  <view class="data--item-record sk-transparent sk-text-14-2857-224 sk-text">2笔</view>
+                </view>
+              </view>
+              <view class="data--type-data-amount">
+                <image class="data--auto-img sk-image"></image>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

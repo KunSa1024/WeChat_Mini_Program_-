@@ -1,0 +1,24 @@
+<!--pages/my/my.wxml-->
+<view class="my">
+
+  <view class="user-bg">
+    <view class="user-info" bindtap="getUserProfile">
+      <view class="avatat">
+        <image class="auto-img" src="{{ userInfoData.avatarUrl }}"></image>
+      </view>
+      <view class="nickname one-text">{{ isAuth ? userInfoData.nickName : '登录/注册' }}</view>
+    </view>
+  </view>
+
+  <view>
+    
+    <view>
+      <list-item
+      title="我的记账"
+      bindclickListItem="viewMyBooking"
+       ></list-item>
+    </view>
+    
+    
+  </view>
+</view>

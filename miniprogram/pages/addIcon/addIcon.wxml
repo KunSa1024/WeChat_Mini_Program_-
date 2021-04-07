@@ -1,0 +1,56 @@
+<!--miniprogram/pages/addIcon/addIcon.wxml-->
+
+<view class="addIcon">
+  <view class="title-box">
+    <view class="title">类别名称</view>
+    <view class="title-content-bxo">
+      <input
+      class="title-content"
+      maxlength="6"
+      placeholder="6个字以内"
+      value="{{ categoryName }}"
+      bindchange="setValue"
+       />
+    </view>
+  </view>
+
+  <view class="icon">
+    <view class="icon-title">
+      类别图标
+    </view>
+    <view class="icon-box">
+      <view
+      class="icon-list"
+      wx:for="{{ subTypes }}"
+      wx:key="index"
+      data-index="{{ index }}"
+      bindtap="toggleSubType"
+      >
+      
+        <view class="icon-list-box {{ choiceIndex == index ? 'active' : '' }}">
+          <image class="aout-img" src="{{ item.icon }}" ></image>
+        </view>
+
+      </view>
+    </view>
+  </view>
+
+  <view class="up-image-box">
+    <view class="up-image-title">上传图标</view>
+    <view class="image-box">
+      <van-uploader
+      file-list="{{ fileList }}"
+      accept="image"
+      bind:after-read="upImage"
+      max-count="1"
+      />
+      <view wx:if="{{ displayDel }}" class="del" bindtap="delImage">删除</view>
+    </view>
+    
+  </view>
+
+  <view class="btn" bindtap="establishIcon">
+    创建
+  </view>
+
+</view>

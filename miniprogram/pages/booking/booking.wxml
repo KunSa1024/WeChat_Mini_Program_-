@@ -1,0 +1,127 @@
+<!-- 骨架屏 -->
+<import src="booking.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+
+
+<view class="booking" wx:else >
+
+  <view class="booking-bg"></view>
+  <view class="booking-box">
+    <view class="booking-type">
+      <view class="booking-type-title">
+        <view
+        class="booking-type-item {{ index == activeIndex ? 'active' : '' }}"
+        wx:for="{{ bookingType }}"
+        wx:key="index"
+        data-index="{{ index }}"
+        data-key="activeIndex"
+        bindtap="toggleBookingType"
+        >
+          {{ item.title }}
+        </view>
+      </view>
+
+      <view class="booking-type-icons">
+        <swiper
+        class="swiper-box"
+        indicator-dots="{{true}}"
+        indicator-active-color="#fedb5b"
+        >
+          <swiper-item
+          wx:for="{{ subTypes }}"
+          wx:key="index"
+          >
+            <view class="swiper-item-box">
+              <view
+              class="sw-icon {{ v.isActive ? 'active' : '' }}"
+              wx:for="{{ item }}"
+              wx:for-item="v"
+              wx:for-index="i"
+              wx:key="i"
+              data-index="{{ i }}"
+              data-page="{{ index }}"
+              data-add="{{ v.type }}"
+              bindtap="toggleSubType"
+              >
+                <view class="sw-icon-box">
+                  <image class="auto-img" src="{{ v.icon }}" mode="widthFix"></image>
+                </view>
+                <view class="sw-icon-text">{{ v.name }}</view>
+              </view>
+            </view>
+          </swiper-item>
+        </swiper>
+
+      </view>
+
+      
+    </view>
+
+    <view class="booking-account">
+      <view class="account-title">账户选择</view>
+      <view class="account-items">
+        <view
+        class="account-item {{ index == activAccountIndex ? 'active' + index : '' }}"
+        wx:for="{{ accounts }}"
+        wx:key="index"
+        data-index="{{ index }}"
+        data-key="activAccountIndex"
+        bindtap="toggleBookingType"
+        >
+          {{ item.name }}
+        </view>
+      </view>
+    </view>
+
+    <view class="booking-content">
+      <view class="booking-content-item">
+        <view class="b-title">日期</view>
+        <view class="c-content">
+          <picker
+          class="picker-box"
+          mode="date"
+          start="2000-01-01"
+          end="{{ currentData }}"
+          data-key="date"
+          bindchange="setValue"
+           >
+            {{ date }}
+          </picker>
+        </view>
+      </view>
+      <view class="booking-content-item">
+        <view class="b-title">金额</view>
+        <view class="c-content">
+          <input
+          class="ipt-number"
+          type="digit"
+          placeholder="填写金额"
+          placeholder-class="ipt-number"
+          value="{{ money }}"
+          data-key="money"
+          bindchange="setValue"
+           />
+        </view>
+      </view>
+      <view class="booking-content-item textarea">
+        <view class="b-title">备注</view>
+        <view class="c-content textarea-c">
+           <input
+          class="t"
+          type="text"
+          placeholder="填写备注"
+          value="{{ comment }}"
+          data-key="comment"
+          bindchange="setValue"
+           />
+        </view>
+      </view>
+
+    </view>
+
+    <view class="save-btn-box">
+        <view class="save-btn" bindtap="save" >保存</view>
+        <button wx:if="{{ !isAuth }}" bindtap="getUserProfile">授权</button>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+/* miniprogram/pages/myBooking/myBooking.wxss */
+@import "./myBooking.skeleton.wxss";
+
+.myBooking {
+  
+}
+
+.not-booking {
+  margin-top: 200rpx;
+  text-align: center;
+  color: #999;
+}

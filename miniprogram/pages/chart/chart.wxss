@@ -1,0 +1,87 @@
+/* pages/chart/chart.wxss */
+@import "./chart.skeleton.wxss";
+
+.chart .chart-nav {
+  height: 60rpx;
+  background-color: #fedb5b;
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+}
+
+.chart .chart-nav .select-date {
+  width: calc(100% - 240rpx);
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #fff;
+  border-radius: 30rpx;
+  padding: 0 30rpx;
+  margin-right: 20rpx;
+  font-size: 28rpx;
+  color: #444;
+}
+
+.chart .chart-nav .date-type {
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background-color: #fff;
+  border-radius: 10rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #444;
+}
+
+.chart .type-nav {
+  display: flex;
+  justify-content: space-around;
+  height: 100rpx;
+  background-color: #fff;
+  padding: 20rpx 0;
+}
+
+.chart .type-nav .type-nav-item {
+  text-align: center;
+  font-weight: bold;
+}
+
+.chart .type-nav .type-nav-item .type-nav-title {
+  padding: 10rpx;
+  border-radius: 10rpx;
+  font-size: 28rpx;
+  color: #666666;
+}
+
+.chart .type-nav .type-nav-item .type-nav-title.sr {
+  border: 1rpx solid #e4393c;
+}
+
+.chart .type-nav .type-nav-item .type-nav-title.zc {
+  border: 1rpx solid #00b26a;
+}
+
+.chart .type-nav .type-nav-item .type-nav-title .type-nav-sr {
+  color: #e4393c;
+}
+
+.chart .type-nav .type-nav-item .type-nav-title .type-nav-zc {
+  color: #00b26a;
+}
+
+
+.chart .pie-box {
+  margin-top: 20rpx;
+  background-color: #fff;
+  height: 600rpx;
+}
+
+/* 图表 */
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+
+.chart .type-data {
+  margin-top: 20rpx;
+}
